@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homeTask 17-05</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script>jQuery(function($){
+    $("#phone").mask("+38(999) 999-9999");
+    $("#credit").mask("9999 9999 9999 9999");
+  });
+  </script>
+</head>
+<body>
+<div><form method="get" action="">
+  <fieldset>
+    <legend>Анкета</legend>
+    <label>Фамилия*</label><input type="text" name="login" maxlength="20" required><br>
+    <label>Имя*</label> <input type="text" name="name" maxlength="20" placeholder="First and last name" required><br>
+    <label>Email*</label> <input type="email" name="email" maxlength="20" placeholder="example@domain.com" required><br>
+    Телефон <input type="text" name="phone" maxlength="20" placeholder="Eg 447500000000" required pattern="[A-Z][a-z]\s\d{12}" id="phone"><br>
+    Кредитная карточка <input type="text" name="credit" id="credit">
+    Дата рождения <input type="date" name="date">
+    <fieldset>
+      <legend>Как с нами связаться?</legend><div class="contact">
+      1. <input type="radio" name="contact" value="E" id="E"><label for="E">Email</label><br>
+      2. <input type="radio" name="contact" value="P" id="P"><label for="P">Телефон</label></div>
+    </fieldset>
+    Какую температуру воздуха предпочитаете?-10С <input type="range"> 50С<br>
+    <div class="color">Ваш любимый цвет <input type="color" name="color"><br></div>
+
+
+    <div class="inform"> <input list="inform" type="text" name="inform">
+      Откуда вы о нас узнали? <datalist id="inform">
+        <option value="techcrunch">https://www.techcrunch.com/</option>
+        <option value="readwriteweb">https://www.readwriteweb.com/</option>
+        <option value="engadget">https://www.engadget.com/</option>
+        <option value="ajaxian">https://www.ajaxian.com/</option>
+      </datalist></div><br>
+    <div><textarea cols="30" rows="5" placeholder="Введите текст"></textarea><br></div><br>
+    <input type="file" name="file"><br>
+
+    <input type="submit" name="sub" value="Сохранить">
+  </fieldset></form>
+</div>
+</body>
+</html>

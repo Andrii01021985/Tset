@@ -1,0 +1,138 @@
+.fon{
+    width: 400px;
+    height: 400px;
+    background: green;
+    margin: 10px auto;
+}
+
+
+.clock{
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    background: linear-gradient(to right, yellowgreen,aqua);
+    border: 20px solid royalblue;
+    margin: 10px auto;
+    position: relative;
+
+}
+.point{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    z-index: 1;
+    transform: translate(130px, 116px);
+    position: absolute;
+}
+.hour{
+    width: 7px;
+    height: 55px;
+    background: black;
+    transform: translate(138px, 71px) rotate(45deg);
+    animation: hour 15s linear infinite;
+    transform-origin: 0 55px;
+    border-radius: 5px;
+    box-shadow: 2px 0 29px 5px darkblue;
+}
+@keyframes hour {
+    0% {
+        transform: translate(138px, 71px) rotate(0deg);
+    }
+    15% {
+        transform: translate(138px, 71px) rotate(45deg);
+    }
+    30% {
+        transform: translate(138px, 71px) rotate(90deg);
+    }
+    50% {
+        transform: translate(138px, 71px) rotate(180deg);
+    }
+    100% {
+        transform: translate(138px, 71px) rotate(360deg);
+    }
+}
+
+
+.minute{
+    width: 5px;
+    height: 80px;
+    background: saddlebrown;
+    transform: translate(139px, -9px);
+    animation: minute 10s linear infinite;
+    transform-origin: 0 80px;
+}
+@keyframes minute {
+    0% {
+        transform: translate(139px, -9px) rotate(0deg);
+    }
+    15% {
+        transform: translate(139px, -9px) rotate(45deg);
+    }
+    30% {
+        transform: translate(139px, -9px) rotate(90deg);
+    }
+    50% {
+        transform: translate(139px, -9px) rotate(180deg);
+    }
+    100% {
+        transform: translate(139px, -9px) rotate(360deg);
+    }
+}
+
+
+.second{
+    width: 2px;
+    height: 100px;
+    background: darkred;
+    transform: translate(139px, -108px) rotate(30deg);
+    animation: second 5s linear infinite;
+    transform-origin: 0 100px;
+}
+@keyframes second {
+    0% {
+        transform: translate(139px, -108px) rotate(0deg);
+    }
+    15% {
+        transform: translate(139px, -108px) rotate(45deg);
+    }
+    30% {
+        transform: translate(139px, -108px) rotate(90deg);
+    }
+    50% {
+        transform: translate(139px, -108px) rotate(180deg);
+    }
+    100% {
+        transform: translate(139px, -108px) rotate(360deg);
+    }
+}
+
+
+
+
+
+.twelve, .three, .six, .nine{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.twelve{
+    top: 2px;
+    left: 129px;
+}
+.three{
+    top: 114px;
+    right: 9px;
+}
+.six{
+    bottom: 2px;
+    left: 129px;
+}
+.nine{
+    top: 114px;
+    left: 9px;
+}
+
+
+
